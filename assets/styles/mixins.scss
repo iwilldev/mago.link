@@ -1,0 +1,132 @@
+@mixin button--base--layout() {
+
+  padding: 0 $short--spacing;
+
+  text-align: center;
+  font-weight: 500;
+
+  background: none;
+  border: 2px solid $primary--color;
+  border-radius: $short--spacing;
+  box-shadow: 2px 2px 4px $background--color--darker, inset 2px 2px 4px $background--color--darker;
+  cursor: pointer;
+
+  transition: background-color 0.25s, border-color 0.25s, transform 0.25s;
+
+  &:hover {
+    background: $primary--color;
+    border-color: $primary--color--lighter;
+    box-shadow: 2px 2px 4px $background--color--darker;
+  }
+
+  &:active {
+    transform: translate(2px, 2px);
+  }
+}
+
+@mixin content--base--layout() {
+  padding: $medium--spacing $large--spacing;
+
+  margin-top: $medium--spacing;
+
+  flex: 1;
+  z-index: 0;
+
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  @media(max-width: 700px) {
+    padding: $medium--spacing;
+  }
+
+  section + section {
+    margin-top: $large--spacing;
+  }
+}
+
+@mixin right--full--image {
+  position: absolute;
+  top: 0;
+  right: -$large--spacing;
+
+  border-radius: 50% 0 0 50%;
+
+  max-width: 600px;
+  height: 100vh;
+  object-fit: cover;
+
+  z-index: -1;
+
+  opacity: 0.1;
+
+  transition: opacity 0.25s, box-shadow 0.25s;
+
+  &:hover {
+    opacity: 0.5;
+    box-shadow: -3px 3px 3px $background--hover--color;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+@mixin left--full--image {
+  position: absolute;
+  top: 0;
+  left: -$large--spacing;
+
+  border-radius: 0% 50% 50% 0;
+
+  max-width: 600px;
+  height: 100vh;
+  object-fit: cover;
+
+  z-index: -1;
+
+  opacity: 0.1;
+
+  transition: opacity 0.25s, box-shadow 0.25s;
+
+  &:hover {
+    opacity: 0.5;
+    box-shadow: 3px 3px 3px $background--hover--color;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+@mixin section--left--base {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  z-index: 1;
+
+  .section--text {
+    max-width: 600px;
+  }
+}
+
+@mixin section--right--base {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: relative;
+  z-index: 1;
+
+  .section--text {
+    max-width: 600px;
+  }
+}
