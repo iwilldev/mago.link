@@ -3,10 +3,10 @@
 <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FF4B4B;}
+	.st0{fill:#FFFFFF;}
 </style>
 <g>
-	<ellipse transform="matrix(0.6803 -0.7329 0.7329 0.6803 -3.8756 29.6052)" class="st0" cx="32" cy="19.2" rx="1.7" ry="1.7"/>
+	<ellipse class="st0" cx="32" cy="19.2" rx="1.7" ry="1.7"/>
 	<path class="st0" d="M33.7,32c0,0.9-0.7,1.7-1.7,1.7c-0.9,0-1.7-0.7-1.7-1.7c0-0.9,0.7-1.7,1.7-1.7C32.9,30.3,33.7,31.1,33.7,32z"
 		/>
 	<circle class="st0" cx="32" cy="44.8" r="1.7"/>

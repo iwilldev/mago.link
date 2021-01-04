@@ -3,12 +3,12 @@
 <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#FF4B4B;stroke-width:2;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:9.9999;}
 </style>
 <g>
 	
-		<rect x="22.3" y="27.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.7345 33.4413)" class="st0" width="19.3" height="19.3"/>
+		<rect x="22.3" y="27.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.7784 33.4468)" class="st0" width="19.3" height="19.3"/>
 	
-		<rect x="24.4" y="16.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.2539 30.5797)" class="st0" width="16.7" height="16.7"/>
+		<rect x="24.4" y="16.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.2786 30.5666)" class="st0" width="16.7" height="16.7"/>
 </g>
 </svg>
