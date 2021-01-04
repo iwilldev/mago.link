@@ -1,17 +1,32 @@
-$primary--color: #FF4B4B;
+$primary--color: #ff4b4b;
 $primary--color--darker: #800000;
-$primary--color--lighter: #FF8080;
+$primary--color--lighter: #ff8080;
 $primary--hover--color: #80000055;
+$primary--color--gradient: linear-gradient(
+  45deg,
+  $primary--color 50%,
+  $primary--color--darker 100%
+);
 
-$secondary--color: #FFEEEE;
-$secondary--color--darker: #ffCCCC;
-$secondary--color--lighter: #FFFFFF;
+$secondary--color: #dddddd;
+$secondary--color--darker: #bbbbbb;
+$secondary--color--lighter: #ffffff;
+$secondary--color--gradient: linear-gradient(
+  45deg,
+  $secondary--color 50%,
+  $secondary--color--darker 100%
+);
 
-$background--color: #121212;
-$background--color--darker: #000000;
-$background--color--lighter: #2c2c2c;
-$background--hover--color: #00000055;
-$background--hover--color--darker: #000000F0;
+$tertiary--color: #323232;
+$tertiary--color--darker: #121212;
+$tertiary--color--lighter: #525252;
+$tertiary--hover--color: #02020288;
+$tertiary--hover--color--darker: #020202f0;
+$tertiary--color--gradient: linear-gradient(
+  45deg,
+  $tertiary--color 50%,
+  $tertiary--color--darker 100%
+);
 
 $larger--spacing: 12rem;
 $large--spacing: 6rem;
@@ -19,5 +34,16 @@ $medium--spacing: 3rem;
 $short--spacing: 1.5rem;
 $shorter--spacing: 0.5rem;
 
-$hover--emoji--love: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🥰</text></svg>") 16 0, auto;
-$hover--emoji--mage: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='50' height='60' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🧙‍♂️</text></svg>") 16 0, auto;
+$hover--emoji--love: url('~assets/images/global/hover-emoji-love.png') 12 0,
+  auto;
+$hover--emoji--mage: url('~assets/images/global/hover-emoji-mage.png') 12 0,
+  auto;
+$hover--emoji--code: url('~assets/images/global/hover-emoji-code.png') 12 0,
+  auto;
+$hover--emoji--zany: url('~assets/images/global/hover-emoji-zany.png') 12 0,
+  auto;
+$hover--emoji--heart--eyes: url('~assets/images/global/hover-emoji-heart-eyes.png')
+    12 0,
+  auto;
+$hover--emoji--hand: url('~assets/images/global/hover-emoji-hand.png') 12 0,
+  pointer;
