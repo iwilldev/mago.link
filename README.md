@@ -22,3 +22,5 @@ Nos dispositivos móveis, Firefox 63+ cairá num fallback e poderá apresentar t
 O Safari Móvel apresentará problemas de espaçamento, assim como a versão desktop. O mesmo acontece com Samsung Internet e Opera Móvel. Esse último, além da incompatibilidade do 'gap' em layout flex, também apresenta incompatibilidade com a função 'clamp()', assim como o Firefox 63+.
 
 Navegadores alternativos com engines baseadas nas das versões suportadas podem funcionar devidamente, mas não foram feitos testes abertos. Versões anteriores as citadas podem não ter compatibilidade (total ou parcial), com os recursos do site.
+
+[Visite a página](https://mago.link)
