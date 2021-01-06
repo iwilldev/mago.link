@@ -1,3 +1,5 @@
+![Capa do Site](https://mago.link/og-background.png)
+
 # mago-link
 
 Essa página linda de bonita foi feita com Nuxt.js, um framework baseado em Vue.js, que permite desenvolver aplicações Front-End com o pé nas costas (até porque, você coda com as mãos).
