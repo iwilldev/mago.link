@@ -41,13 +41,7 @@ export default Vue.extend({
   width: $larger--spacing;
   padding: 0 $short--spacing;
 
-  background: $primary--color;
-  background: -webkit-linear-gradient(
-    to top,
-    $primary--color--darker 5%,
-    $primary--color
-  );
-  background: linear-gradient(to top, $primary--color--darker 5%, $primary--color);
+  background: $tertiary--color;
 
   box-shadow: 3px 3px 6px #000000aa;
 
@@ -62,7 +56,8 @@ export default Vue.extend({
     width: 2rem;
     object-fit: contain;
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.8;
+    transition: 0.25s;
   }
 
   &__text {
@@ -70,46 +65,24 @@ export default Vue.extend({
     z-index: 1;
     color: $secondary--color;
     font-weight: 500;
-  }
-
-  &::after {
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: 0;
-    content: "";
-    height: $medium--spacing;
-    width: $larger--spacing;
-
-    background: $primary--color;
-    background: -webkit-linear-gradient(
-      to bottom,
-      $primary--color--darker 5%,
-      $primary--color
-    );
-    background: linear-gradient(to bottom, $primary--color--darker 5%, $primary--color);
-    opacity: 0;
-    transition: 0.5s;
+    transition: 0.25s;
   }
 
   &:hover {
-    &::after {
-      opacity: 1;
-    }
+    background: $primary--color;
   }
 
   &:hover &__icon {
-    opacity: 0.8;
+    filter: invert(100%);
+  }
+
+  &:hover &__text {
+    color: $tertiary--color--darker;
   }
 
   &--wide {
     width: 100%;
     max-width: 25rem;
-
-    &::after {
-      width: 100%;
-      max-width: 25rem;
-    }
   }
 
   &--back {

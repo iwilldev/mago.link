@@ -68,68 +68,56 @@ export default Vue.extend({
   justify-content: center;
 
   &__image {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: top;
     z-index: 1;
     pointer-events: none;
-    border: 1px solid $tertiary--color;
+    border: 3px solid $tertiary--color;
   }
 
   &__text {
     margin: 0;
+    width: 100%;
     position: absolute;
     text-transform: capitalize;
     font-weight: 500;
     color: $secondary--color;
     z-index: 1;
-    background: $primary--color;
-    background: -webkit-linear-gradient(
-      to top,
-      $primary--color--darker 5%,
-      $primary--color
-    );
-    background: linear-gradient(to top, $primary--color--darker 5%, $primary--color);
+    background: $tertiary--color;
     padding: $shorter--spacing;
-    bottom: -0.25rem;
-    left: -0.25rem;
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: $primary--color;
-      background: -webkit-linear-gradient(
-        to bottom,
-        $primary--color--darker 5%,
-        $primary--color
-      );
-      background: linear-gradient(to bottom, $primary--color--darker 5%, $primary--color);
-      opacity: 0;
-      transition: 0.5s;
-    }
+    bottom: 0;
   }
 
   &__icon {
     position: absolute;
-    height: $short--spacing;
-    width: $short--spacing;
+    top: 0;
+    right: 0;
+
+    height: 2rem;
+    width: 2rem;
     object-fit: contain;
+
     margin: 0;
-    top: -0.25rem;
-    right: -0.25rem;
+    padding: 0.25rem;
+    background: $tertiary--color;
 
     z-index: 1;
     pointer-events: none;
   }
 
-  &:hover &__text::after {
-    opacity: 1;
+  &:hover &__text {
+    color: $tertiary--color--darker;
+    background: $primary--color;
+  }
+
+  &:hover &__icon {
+    background: $primary--color;
+  }
+
+  &:hover &__image {
+    border-color: $primary--color;
   }
 }
 </style>
