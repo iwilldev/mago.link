@@ -67,6 +67,8 @@ export default Vue.extend({
   align-items: center;
   justify-content: center;
 
+  transition: 0.25s;
+
   &__image {
     width: 100%;
     height: 100%;

@@ -40,6 +40,7 @@
             button-text="Bora lá!"
             :button-icon="project.icon"
             button-type="external"
+            class="g-button--project"
           />
         </div>
       </section>

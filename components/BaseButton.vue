@@ -51,13 +51,14 @@ export default Vue.extend({
   align-items: center;
   justify-content: space-between;
 
+  transition: 0.25s;
+
   &__icon {
     height: 2rem;
     width: 2rem;
     object-fit: contain;
     z-index: 1;
     opacity: 0.8;
-    transition: 0.25s;
   }
 
   &__text {
@@ -65,7 +66,6 @@ export default Vue.extend({
     z-index: 1;
     color: $secondary--color;
     font-weight: 500;
-    transition: 0.25s;
   }
 
   &:hover {
@@ -74,6 +74,10 @@ export default Vue.extend({
 
   &:hover &__icon {
     filter: invert(100%);
+  }
+
+  &--project:hover &__icon {
+    filter: invert(0%);
   }
 
   &:hover &__text {
