@@ -1,18 +1,21 @@
 <template>
   <div>
-    <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
-      <h3 class="contact--header">Contatos</h3>
+    <div
+      class="g-content-box g-content-box--short-padding"
+      :class="isMenuVisible ? 'invisible' : ''"
+    >
+      <h3>Contatos</h3>
     </div>
-    <div class="contact--container">
-      <base-button-link
+    <div class="l-contacts">
+      <base-button
         v-for="link in links"
         :key="link.icon"
         :button-destination="link.link"
         :button-text="link.text"
         :button-icon="link.icon"
         button-type="external"
-        class="contact--button"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-button--wide"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
     </div>
   </div>
@@ -61,11 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contact--header {
-  margin-bottom: 0;
-}
-
-.contact--container {
+.l-contacts {
   margin-top: $medium--spacing;
   display: flex;
   flex-direction: row;
@@ -73,15 +72,5 @@ export default {
   justify-content: center;
   align-content: flex-start;
   gap: $medium--spacing;
-}
-
-.base--button--template.contact--button {
-  width: 100%;
-  max-width: 25rem;
-
-  &::after {
-    width: 100%;
-    max-width: 25rem;
-  }
 }
 </style>

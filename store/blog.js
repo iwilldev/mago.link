@@ -1,6 +1,21 @@
 export const state = () => ({
   postsList: [
     {
+      id: 'quem-me-vue-mentiu-01',
+      icon: 'dev-to',
+      title: 'Calculadora - Projeto em Vue.js',
+      image: 'https://mago.link/blogcover/011.png',
+      link:
+        'https://dev.to/williammago/quemmevuementiu-01-criando-uma-calculadora-projeto-em-vue-js-n2i',
+    },
+    {
+      id: 'mudando-tema-com-css-puro',
+      icon: 'dev-to',
+      title: 'Mudando tema com CSS Puro',
+      image: 'https://mago.link/blogcover/010.png',
+      link: 'https://dev.to/williammago/mudando-tema-da-tela-com-css-puro-ej5',
+    },
+    {
       id: 'instagram-padding-dinamico',
       icon: 'instagram',
       title: 'Padding Dinâmico e Responsividade',

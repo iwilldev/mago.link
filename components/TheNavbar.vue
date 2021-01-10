@@ -1,26 +1,27 @@
 <template>
-  <div id="navigation--top--bar">
-    <nuxt-link to="/">
+  <div class="nav">
+    <nuxt-link to="/" class="nav__link">
       <img
+        class="logo"
         src="~/assets/images/branding/logo.svg"
         alt="Logo do Mago: chapéu branco em design flat com a ponta dobrada para a esquerda e uma estrela na ponta"
       />
     </nuxt-link>
-    <transition name="menu">
+    <transition name="menu-opening" mode="out-in">
       <p key="1" v-if="isMenuVisible">Fechar</p>
       <p key="2" v-else>Menu</p>
     </transition>
     <button
-      id="navigation--top--bar--menu--button"
+      class="nav-button"
       @click="toggleMenu"
       :class="isMenuVisible ? 'visible' : ''"
       aria-valuetext="Menu"
     >
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </button>
-    <the-navigation-top-bar-menu id="navigation--top--bar--menu" />
+    <the-menu class="menu" />
   </div>
 </template>
 
@@ -47,7 +48,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-#navigation--top--bar {
+.nav {
   height: $medium--spacing;
   width: 100%;
 
@@ -64,7 +65,7 @@ export default Vue.extend({
 
   z-index: 99;
 
-  #navigation--top--bar--menu {
+  .menu {
     z-index: -1;
   }
 
@@ -76,13 +77,13 @@ export default Vue.extend({
     margin-right: $shorter--spacing;
   }
 
-  & > a,
-  & > a img {
+  &__link,
+  .logo {
     height: 100%;
     outline: 0;
   }
 
-  &--menu--button {
+  .nav-button {
     all: unset;
     height: 1.25rem;
     width: $short--spacing;
@@ -93,7 +94,7 @@ export default Vue.extend({
 
     cursor: $hover--emoji--hand;
 
-    div {
+    .line {
       height: 0.25rem;
       width: $short--spacing;
       pointer-events: none;
@@ -105,13 +106,13 @@ export default Vue.extend({
     }
 
     &:hover {
-      div {
+      .line {
         background: $primary--color--lighter;
       }
     }
 
     &.visible {
-      div {
+      .line {
         position: absolute;
         box-shadow: none;
 
@@ -134,11 +135,11 @@ export default Vue.extend({
   }
 }
 
-.menu-enter-active {
+.menu-opening-enter-active {
   transition: 0.25s;
 }
-.menu-enter,
-.menu-leave {
+.menu-opening-enter,
+.menu-opening-leave {
   opacity: 0;
 }
 </style>

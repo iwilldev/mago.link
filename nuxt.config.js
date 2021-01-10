@@ -22,7 +22,7 @@ export default {
   ],
 
   styleResources: {
-    scss: ['assets/styles/variables.scss', 'assets/styles/resets.scss'],
+    scss: ['assets/styles/variables.scss', 'assets/styles/global.scss'],
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

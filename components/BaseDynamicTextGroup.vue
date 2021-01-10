@@ -1,5 +1,5 @@
 <template>
-  <span class="dynamic--text--group">{{ dynamicText }}</span>
+  <span class="g-dynamic-texts">{{ dynamicText }}</span>
 </template>
 
 <script>
@@ -56,7 +56,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-span {
+.g-dynamic-texts {
+  font-style: italic;
   color: $primary--color;
 }
 </style>

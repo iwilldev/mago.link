@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      class="text--container index--text--container"
-      :class="isMenuVisible ? 'invisible--content' : ''"
+      class="g-content-box g-content-box--short-padding"
+      :class="isMenuVisible ? 'invisible' : ''"
     >
       <h1>
         mago(<base-dynamic-text-group
@@ -13,7 +13,7 @@
         Site e portfólio de William Gonçalves: dev front-end, designer, aspirante a
         fotógrafo, escritor amador e, no geral, criativo por essência.
       </p>
-      <base-button-link
+      <base-button
         @click.native="toggleMenu"
         button-destination=""
         button-text="Vamos lá?"
@@ -79,11 +79,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-#content--container {
+.content {
   justify-content: flex-end;
+}
 
-  .text--container {
-    padding: $shorter--spacing $medium--spacing;
-  }
+.g-content-box .g-button {
+  margin-bottom: $short--spacing;
 }
 </style>

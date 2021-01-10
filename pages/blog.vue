@@ -1,5 +1,5 @@
 <template>
-  <base-gallery-template
+  <base-gallery
     page-title="blog"
     :list-of-dynamic-texts="['youtube', 'design', 'code', 'dev.to', 'learn']"
     card-type="external"
@@ -9,10 +9,10 @@
 
 <script>
 import Vue from "vue";
-import BaseGalleryTemplate from "~/components/BaseGalleryTemplate.vue";
+import BaseGallery from "~/components/BaseGallery.vue";
 
 export default Vue.extend({
-  components: { BaseGalleryTemplate },
+  components: { BaseGallery },
   head: {
     title: `Blog | William 'Mago' Gonçalves`,
     meta: [

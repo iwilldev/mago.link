@@ -1,8 +1,9 @@
 <template>
-  <div id="default--template">
-    <ul id="background--animation">
+  <div class="portfolio">
+    <ul class="animation">
       <li
         :key="icon.id"
+        class="animation__item"
         v-for="icon in backgroundIcons"
         :style="{
           bottom: '50%',
@@ -14,20 +15,20 @@
         }"
       ></li>
     </ul>
-    <the-navigation-top-bar />
-    <transition name="home">
-      <Nuxt id="content--container" />
+    <the-navbar />
+    <transition name="screen-change">
+      <Nuxt class="content" />
     </transition>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import TheNavigationTopBar from "~/components/TheNavigationTopBar.vue";
+import TheNavbar from "~/components/TheNavbar.vue";
 export default Vue.extend({
-  components: { TheNavigationTopBar },
+  components: { TheNavbar },
   transition: {
-    name: "home",
+    name: "screen-change",
     mode: "out-in",
   },
   data() {
@@ -60,54 +61,11 @@ html {
   height: 100%;
 }
 
-#default--template {
-  min-height: 100%;
-
-  display: flex;
-  flex-direction: column;
-}
-
-#background--animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: -99;
-  background-size: cover;
-  will-change: opacity transform;
-}
-
-#background--animation li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  animation: animate linear infinite alternate-reverse;
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -98;
-  opacity: 0.05;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg) translate(55vw, -55vh);
-  }
-
-  100% {
-    transform: rotate(360deg) translate(-55vw, 55vh);
-  }
-}
-
-.home-enter-active {
+.screen-change-enter-active {
   transition: 0.5s;
 }
-.home-enter,
-.home-leave {
+.screen-change-enter,
+.screen-change-leave {
   opacity: 0;
 }
 </style>

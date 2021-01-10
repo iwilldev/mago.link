@@ -1,14 +1,17 @@
 <template>
   <div>
-    <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
-      <h1 class="gallery--header">
+    <div
+      class="g-content-box g-content-box--short-padding"
+      :class="isMenuVisible ? 'invisible' : ''"
+    >
+      <h1>
         {{ pageTitle }}(<base-dynamic-text-group
           :list-of-dynamic-texts="listOfDynamicTexts"
         />)
       </h1>
     </div>
-    <div id="cards--container">
-      <base-card-for-portfolio
+    <div class="g-l-gallery">
+      <base-card
         v-for="post in postsList"
         :key="post.id"
         :card-title="post.title"
@@ -17,7 +20,7 @@
         :card-type="cardType"
         :card-image="post.image ? post.image : null"
         :card-destination="cardType === 'internal' ? cardDestination : post.link"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
     </div>
   </div>
@@ -25,10 +28,10 @@
 
 <script>
 import Vue from "vue";
-import BaseCardForPortfolio from "~/components/BaseCardForPortfolio.vue";
+import BaseCard from "~/components/BaseCard.vue";
 
 export default Vue.extend({
-  components: { BaseCardForPortfolio },
+  components: { BaseCard },
   props: {
     pageTitle: String,
     listOfDynamicTexts: Array,
@@ -67,11 +70,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.gallery--header {
-  margin-bottom: $shorter--spacing;
-}
-
-#cards--container {
+.g-l-gallery {
   margin-top: $medium--spacing;
   display: flex;
   flex-wrap: wrap;

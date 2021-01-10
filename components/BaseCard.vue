@@ -2,18 +2,18 @@
   <nuxt-link
     v-if="cardType == 'internal'"
     :to="{ name: cardDestination, params: { id: cardId } }"
-    class="card--container"
+    class="g-card"
   >
     <img
-      class="card--image"
+      class="g-card__image"
       :src="
         cardImage ? cardImage : require('~/assets/images/portfolio/' + cardId + '.png')
       "
       :alt="cardTitle"
     />
-    <p class="card--title">{{ cardTitle }}</p>
+    <p class="g-card__text">{{ cardTitle }}</p>
     <img
-      class="card--icon"
+      class="g-card__icon"
       :src="require('~/assets/images/icons/' + cardIcon + '.svg')"
       :alt="cardIcon"
     />
@@ -22,20 +22,20 @@
   <a
     v-else
     :href="cardDestination"
-    class="card--container"
+    class="g-card"
     target="_blank"
     rel="noreferrer noopener"
   >
     <img
-      class="card--image"
+      class="g-card__image"
       :src="
         cardImage ? cardImage : require('~/assets/images/portfolio/' + cardId + '.png')
       "
       :alt="cardTitle"
     />
-    <p class="card--title">{{ cardTitle }}</p>
+    <p class="g-card__text">{{ cardTitle }}</p>
     <img
-      class="card--icon"
+      class="g-card__icon"
       :src="require('~/assets/images/icons/' + cardIcon + '.svg')"
       :alt="cardIcon"
     />
@@ -57,7 +57,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.card--container {
+.g-card {
   width: 100%;
   max-width: 24rem;
   height: 13.5rem;
@@ -67,7 +67,7 @@ export default Vue.extend({
   align-items: center;
   justify-content: center;
 
-  .card--image {
+  &__image {
     width: 90%;
     height: 90%;
     object-fit: cover;
@@ -77,14 +77,20 @@ export default Vue.extend({
     border: 1px solid $tertiary--color;
   }
 
-  .card--title {
+  &__text {
     margin: 0;
     position: absolute;
     text-transform: capitalize;
     font-weight: 500;
     color: $secondary--color;
     z-index: 1;
-    background: $tertiary--color--gradient;
+    background: $primary--color;
+    background: -webkit-linear-gradient(
+      to top,
+      $primary--color--darker 5%,
+      $primary--color
+    );
+    background: linear-gradient(to top, $primary--color--darker 5%, $primary--color);
     padding: $shorter--spacing;
     bottom: -0.25rem;
     left: -0.25rem;
@@ -97,13 +103,19 @@ export default Vue.extend({
       content: "";
       width: 100%;
       height: 100%;
-      background: $primary--color--gradient;
+      background: $primary--color;
+      background: -webkit-linear-gradient(
+        to bottom,
+        $primary--color--darker 5%,
+        $primary--color
+      );
+      background: linear-gradient(to bottom, $primary--color--darker 5%, $primary--color);
       opacity: 0;
       transition: 0.5s;
     }
   }
 
-  .card--icon {
+  &__icon {
     position: absolute;
     height: $short--spacing;
     width: $short--spacing;
@@ -116,10 +128,8 @@ export default Vue.extend({
     pointer-events: none;
   }
 
-  &:hover {
-    .card--title::after {
-      opacity: 1;
-    }
+  &:hover &__text::after {
+    opacity: 1;
   }
 }
 </style>

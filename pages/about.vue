@@ -1,13 +1,13 @@
 <template>
-  <div id="content--container" class="about-content">
-    <section class="section--left--base">
+  <div>
+    <section class="g-section">
       <img
-        class="section--image"
+        class="g-section__image"
         src="~/assets/images/pages/about/profile.jpg"
         alt="Minha foto, tirada pelo lado esquerdo do rosto. Estou de óculos e esboçando um sorriso de lábios cerrados."
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3><base-dynamic-text text-to-be-written="O homem por trás da mágica" /></h3>
         <p>
           William Gonçalves, carioca, natural da Zona Norte (Alô, Andaraí!), mas andarilho
@@ -49,14 +49,14 @@
         </p>
       </div>
     </section>
-    <section class="section--right--base">
+    <section class="g-section g-section--right-aligned">
       <img
-        class="section--image"
+        class="g-section__image"
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3>De onde o Mago surgiu?</h3>
         <p>
           O Mago nasceu de uma brincadeira durante o Mega Hack 3.0 da Shawee, do qual
@@ -84,14 +84,14 @@
         </p>
       </div>
     </section>
-    <section class="section--left--base">
+    <section class="g-section">
       <img
-        class="section--image"
+        class="g-section__image"
         src="~/assets/images/pages/about/stacks-used.png"
         alt="Ícone de fechamento de tag HTML, com os logos do Nuxt.js, do Vue.js e do Sass, abaixo."
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3>Sobre esse portif*da</h3>
         <p>
           Essa página linda de bonita foi feita com
@@ -108,13 +108,11 @@
           <a href="https://sass-lang.com/" target="_blank" rel="noreferrer noopener"
             >Sass</a
           >
-          em sintaxe SCSS.
+          em sintaxe SCSS, utilizando a metodologia BEM.
         </p>
         <p>
-          Todas as artes e animações também são autorais, com exceção do vídeo na página
-          inicial, que foi feito no app
-          <a href="https://zepeto.me/" target="_blank" rel="noreferrer noopener">Zepeto</a
-          >, e dos ícones das stacks e das ferramentas, no portfólio, que foram pegos no
+          Todas as artes e animações também são autorais, com exceção dos ícones das
+          stacks e das ferramentas, no portfólio, que foram pegos no
           <a href="https://devicon.dev/" target="_blank" rel="noreferrer noopener"
             >DEVICON</a
           >
@@ -204,26 +202,26 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-section {
+.g-section {
   &:nth-child(1) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--love;
     }
   }
 
   &:nth-child(3) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--code;
     }
   }
 
   &:nth-child(2) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--mage;
     }
   }
 
-  .section--image {
+  .g-section__image {
     align-self: center;
   }
 }

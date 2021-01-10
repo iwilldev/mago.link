@@ -1,12 +1,15 @@
 <template>
   <div>
-    <section class="section--left--base">
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+    <section class="g-section">
+      <div
+        class="g-content-box g-content-box--short-padding"
+        :class="isMenuVisible ? 'invisible' : ''"
+      >
         <h1>Experiência</h1>
       </div>
       <div
-        class="text--container"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-content-box"
+        :class="isMenuVisible ? 'invisible' : ''"
         v-for="experience in experiences"
         :key="experience.position"
       >
@@ -15,32 +18,39 @@
         <p>{{ experience.description }}</p>
       </div>
     </section>
-    <section class="section--left--base">
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+    <section class="g-section">
+      <div
+        class="g-content-box g-content-box--short-padding"
+        :class="isMenuVisible ? 'invisible' : ''"
+      >
         <h1>Habilidades</h1>
       </div>
-      <div class="stacks--container">
+      <div class="l-stacks">
         <div
-          class="stack--alone"
+          class="stack"
           v-for="stack in stacks"
           :key="stack.name"
-          :class="isMenuVisible ? 'invisible--content' : ''"
+          :class="isMenuVisible ? 'invisible' : ''"
         >
           <img
             :src="require('~/assets/images/icons/' + stack.name + '.svg')"
             :alt="stack.name"
+            class="stack__image"
           />
-          <small>{{ stack.name }}</small>
+          <small class="stack__text">{{ stack.name }}</small>
         </div>
       </div>
     </section>
-    <section class="section--left--base">
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+    <section class="g-section">
+      <div
+        class="g-content-box g-content-box--short-padding"
+        :class="isMenuVisible ? 'invisible' : ''"
+      >
         <h1>Formações</h1>
       </div>
       <div
-        class="text--container"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-content-box"
+        :class="isMenuVisible ? 'invisible' : ''"
         v-for="certificate in certificates"
         :key="certificate.position"
       >
@@ -48,7 +58,7 @@
         <h5>{{ certificate.school }}</h5>
         <i>{{ certificate.date }}</i>
         <p><b>Ementa/Conteúdos:</b> {{ certificate.content }}</p>
-        <base-button-link
+        <base-button
           v-if="certificate.link"
           :button-destination="certificate.link"
           button-text="Certificado"
@@ -62,10 +72,8 @@
 
 <script>
 import Vue from "vue";
-import BaseGalleryTemplate from "~/components/BaseGalleryTemplate.vue";
 
 export default Vue.extend({
-  components: { BaseGalleryTemplate },
   head: {
     title: `Currículo | William 'Mago' Gonçalves`,
     meta: [
@@ -106,20 +114,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.text--container {
-  &:nth-child(1) {
-    h1 {
-      margin: 0;
-    }
-    margin-bottom: $medium--spacing;
-  }
-}
-
-.text--container + .text--container {
+.g-content-box + .g-content-box {
   margin-top: $medium--spacing;
 }
 
-.stacks--container {
+.l-stacks {
   margin-top: $medium--spacing;
   display: flex;
   flex-wrap: wrap;
@@ -128,18 +127,20 @@ export default Vue.extend({
   justify-content: center;
   padding: 0 calc((100vw - 1200px) / 2);
 
-  .stack--alone {
+  .stack {
     width: $large--spacing;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $shorter--spacing;
-    img {
+
+    &__image {
       height: $medium--spacing;
       width: $medium--spacing;
       object-fit: contain;
     }
-    small {
+
+    &__text {
       color: $secondary--color--lighter;
     }
   }

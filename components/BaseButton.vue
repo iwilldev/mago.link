@@ -1,27 +1,25 @@
 <template>
-  <nuxt-link
-    v-if="buttonType === 'internal'"
-    :to="buttonDestination"
-    class="base--button--template"
-  >
+  <nuxt-link v-if="buttonType === 'internal'" :to="buttonDestination" class="g-button">
     <img
       :src="require('~/assets/images/icons/' + buttonIcon + '.svg')"
       :alt="buttonText"
+      class="g-button__icon"
     />
-    <p>{{ buttonText }}</p>
+    <p class="g-button__text">{{ buttonText }}</p>
   </nuxt-link>
   <a
     v-else
     :href="buttonDestination"
-    class="base--button--template"
+    class="g-button"
     target="_blank"
     rel="noreferrer noopener"
   >
     <img
       :src="require('~/assets/images/icons/' + buttonIcon + '.svg')"
       :alt="buttonText"
+      class="g-button__icon"
     />
-    <p>{{ buttonText }}</p>
+    <p class="g-button__text">{{ buttonText }}</p>
   </a>
 </template>
 
@@ -38,14 +36,20 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-.base--button--template {
+.g-button {
   height: $medium--spacing;
   width: $larger--spacing;
   padding: 0 $short--spacing;
 
-  background: $tertiary--color--gradient;
+  background: $primary--color;
+  background: -webkit-linear-gradient(
+    to top,
+    $primary--color--darker 5%,
+    $primary--color
+  );
+  background: linear-gradient(to top, $primary--color--darker 5%, $primary--color);
 
-  box-shadow: 2px 2px 4px $tertiary--color--darker;
+  box-shadow: 3px 3px 6px #000000aa;
 
   position: relative;
 
@@ -53,14 +57,15 @@ export default Vue.extend({
   align-items: center;
   justify-content: space-between;
 
-  img {
+  &__icon {
     height: 2rem;
     width: 2rem;
     object-fit: contain;
     z-index: 1;
+    opacity: 0.5;
   }
 
-  p {
+  &__text {
     margin: 0;
     z-index: 1;
     color: $secondary--color;
@@ -76,7 +81,13 @@ export default Vue.extend({
     height: $medium--spacing;
     width: $larger--spacing;
 
-    background: $primary--color--gradient;
+    background: $primary--color;
+    background: -webkit-linear-gradient(
+      to bottom,
+      $primary--color--darker 5%,
+      $primary--color
+    );
+    background: linear-gradient(to bottom, $primary--color--darker 5%, $primary--color);
     opacity: 0;
     transition: 0.5s;
   }
@@ -85,6 +96,24 @@ export default Vue.extend({
     &::after {
       opacity: 1;
     }
+  }
+
+  &:hover &__icon {
+    opacity: 0.8;
+  }
+
+  &--wide {
+    width: 100%;
+    max-width: 25rem;
+
+    &::after {
+      width: 100%;
+      max-width: 25rem;
+    }
+  }
+
+  &--back {
+    margin: 3rem 0;
   }
 }
 </style>

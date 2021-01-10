@@ -1,5 +1,5 @@
 <template>
-  <base-gallery-template
+  <base-gallery
     page-title="design"
     :list-of-dynamic-texts="['art', 'logo', 'ai', 'psd', 'xd']"
     card-destination="design-id"
@@ -10,10 +10,10 @@
 
 <script>
 import Vue from "vue";
-import BaseGalleryTemplate from "~/components/BaseGalleryTemplate.vue";
+import BaseGallery from "~/components/BaseGallery.vue";
 
 export default Vue.extend({
-  components: { BaseGalleryTemplate },
+  components: { BaseGallery },
   head: {
     title: `Projetos de Design | William 'Mago' Gonçalves`,
     meta: [

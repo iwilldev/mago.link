@@ -1,38 +1,41 @@
 <template>
   <div>
     <div v-if="project">
-      <section class="section--left--base half--screen--section">
-        <base-button-link
-          :button-destination="projectType === 'web-id' ? '/web' : '/design'"
-          button-text="Voltar"
-          button-icon="UIBack"
-          button-type="internal"
-          class="go--back--button"
-          :class="isMenuVisible ? 'invisible--content' : ''"
-        />
-        <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
-          <h3 class="project--header">{{ project.title }}</h3>
-          <p class="project--paragraph">{{ project.description }}</p>
+      <section class="g-section g-section--half-sized">
+        <div
+          class="g-content-box g-content-box--short-padding"
+          :class="isMenuVisible ? 'invisible' : ''"
+        >
+          <h3 class="g-section__project-title">
+            {{ project.title }}
+          </h3>
+          <p class="g-section__project-text">
+            {{ project.description }}
+          </p>
         </div>
       </section>
-      <section class="section--left--base half--screen--section">
+      <section class="g-section g-section--half-sized">
         <img
           :src="require('~/assets/images/portfolio/' + project.id + '.png')"
           :alt="project.title"
-          class="project--image"
-          :class="isMenuVisible ? 'invisible--content' : ''"
+          class="g-section__project-image"
+          :class="isMenuVisible ? 'invisible' : ''"
         />
       </section>
-      <section class="section--right--base half--screen--section">
-        <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
-          <h3 class="project--header">{{ project.secondTitle }}</h3>
-          <p class="project--paragraph">{{ project.secondDescription }}</p>
+      <section class="g-section g-section--right-aligned g-section--half-sized">
+        <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+          <h3 class="g-section__project-title">
+            {{ project.secondTitle }}
+          </h3>
+          <p class="g-section__project-text">
+            {{ project.secondDescription }}
+          </p>
         </div>
       </section>
       <section v-if="project.link">
-        <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
-          <h3 class="project--header">Visite a página do projeto</h3>
-          <base-button-link
+        <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+          <h3 class="g-section__project-title">Visite a página do projeto</h3>
+          <base-button
             :button-destination="project.link"
             button-text="Bora lá!"
             :button-icon="project.icon"
@@ -40,13 +43,13 @@
           />
         </div>
       </section>
-      <base-button-link
+      <base-button
         :button-destination="projectType === 'web-id' ? '/web' : '/design'"
         button-text="Voltar"
         button-icon="UIBack"
         button-type="internal"
-        class="go--back--button"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-button--back"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
     </div>
     {{ !project ? this.$router.push("/404") : null }}
@@ -121,29 +124,4 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-section {
-  .project--header {
-    text-transform: capitalize;
-  }
-
-  .project--paragraph {
-    white-space: pre-line;
-  }
-
-  &:nth-child(1) .go--back--button,
-  &:nth-child(3) {
-    margin-bottom: $medium--spacing;
-  }
-
-  .project--image {
-    justify-self: center;
-    align-self: center;
-    width: 100%;
-    max-width: 1000px;
-    object-fit: cover;
-    border: 5px solid $secondary--color--lighter;
-    cursor: $hover--emoji--heart--eyes;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

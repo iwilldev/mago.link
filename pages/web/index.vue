@@ -1,5 +1,5 @@
 <template>
-  <base-gallery-template
+  <base-gallery
     page-title="projetos"
     :list-of-dynamic-texts="['js', 'css', 'vue', 'jsx', 'html']"
     card-destination="web-id"
@@ -10,10 +10,10 @@
 
 <script>
 import Vue from "vue";
-import BaseGalleryTemplate from "~/components/BaseGalleryTemplate.vue";
+import BaseGallery from "~/components/BaseGallery.vue";
 
 export default Vue.extend({
-  components: { BaseGalleryTemplate },
+  components: { BaseGallery },
   head: {
     title: `Projetos Web | William 'Mago' Gonçalves`,
     meta: [

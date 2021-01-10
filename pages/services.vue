@@ -1,13 +1,13 @@
 <template>
   <div>
-    <section class="section--left--base">
+    <section class="g-section">
       <img
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
-        class="section--image"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-section__image"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h1><base-dynamic-text text-to-be-written="Vamos fazer mágica?" /></h1>
         <p>
           Está precisando de um combustível criativo para seu negócio ou projeto? Achou!
@@ -21,21 +21,21 @@
         <p>Confira abaixo e descubra um pouco do que podemos fazer por aí.</p>
       </div>
     </section>
-    <section class="section--right--base">
+    <section class="g-section g-section--right-aligned">
       <img
         src="~/assets/images/pages/services/services-web.png"
         alt="Ícone de fechamento de tag acima e ícones abaixo: JavaScript, CSS, HTML, Vue.js e ReactJS"
-        class="section--image"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-section__image"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3>Sites, Apps e Interfaces</h3>
         <p>
           De páginas institucionais a aplicações web customizadas, posso desenvolver uma
           infinidade de projetos para atender seu negócio.
         </p>
         <p>Você pode conferir o portfólio de projetos web através do link abaixo.</p>
-        <base-button-link
+        <base-button
           button-destination="/web"
           button-text="Projetos Web"
           button-icon="UIMenuWeb"
@@ -43,14 +43,14 @@
         />
       </div>
     </section>
-    <section class="section--left--base">
+    <section class="g-section">
       <img
         src="~/assets/images/pages/services/services-design.png"
         alt="Ícone branco de uma paleta de cores com fundo vermelho"
-        class="section--image"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-section__image"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3>Criação de Marca, Artes para Publicidade e Material Corporativo</h3>
         <p>
           Desenvolvo projetos visuais, desde a sua identidade até o material que será
@@ -61,7 +61,7 @@
         <p>
           Você pode conferir o portfólio de projetos de design através do link abaixo.
         </p>
-        <base-button-link
+        <base-button
           button-destination="/design"
           button-text="Design"
           button-icon="UIMenuDesign"
@@ -69,14 +69,14 @@
         />
       </div>
     </section>
-    <section class="section--right--base">
+    <section class="g-section g-section--right-aligned">
       <img
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
-        class="section--image"
-        :class="isMenuVisible ? 'invisible--content' : ''"
+        class="g-section__image"
+        :class="isMenuVisible ? 'invisible' : ''"
       />
-      <div class="text--container" :class="isMenuVisible ? 'invisible--content' : ''">
+      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
         <h3>Serviços pontuais e recorrentes</h3>
         <p>
           Se você entende que sua demanda pode ser atendida através de um projeto,
@@ -93,7 +93,7 @@
           links abaixo.
         </p>
         <p>Vamos bater um papo e entender como posso te ajudar?</p>
-        <base-button-link
+        <base-button
           button-destination="/contacts"
           button-text="Contatos"
           button-icon="UIMenuWeb"
@@ -143,27 +143,27 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-section {
+.g-section {
   &:nth-child(1),
   &:nth-child(4) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--mage;
     }
   }
 
   &:nth-child(3) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--love;
     }
   }
 
   &:nth-child(2) {
-    .section--image {
+    .g-section__image {
       cursor: $hover--emoji--code;
     }
   }
 
-  .section--image {
+  .g-section__image {
     align-self: center;
   }
 }
