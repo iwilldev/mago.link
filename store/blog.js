@@ -1,6 +1,21 @@
 export const state = () => ({
   postsList: [
     {
+      id: 'entra-e-sai-do-viewport',
+      icon: 'dev-to',
+      title: 'Capturando e animando elementos quando saem e entram na tela',
+      image: 'https://mago.link/blogcover/013.png',
+      link:
+        'https://dev.to/williammago/capturando-e-animando-elementos-quando-saem-e-entram-na-tela-viewport-jm5',
+    },
+    {
+      id: 'como-melhorar-o-contraste',
+      icon: 'instagram',
+      title: 'Como melhorar o contraste do texto no seu projeto',
+      image: 'https://mago.link/blogcover/012.png',
+      link: 'https://www.instagram.com/p/CJv9N52g11N/',
+    },
+    {
       id: 'quem-me-vue-mentiu-01',
       icon: 'dev-to',
       title: 'Calculadora - Projeto em Vue.js',
