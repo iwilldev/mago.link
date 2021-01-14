@@ -2,12 +2,14 @@
   <div>
     <div
       class="g-content-box g-content-box--short-padding"
-      :class="isMenuVisible ? 'invisible' : ''"
+      data-aos="fade-right"
+      :class="isMenuVisible ? 'invisible' : 'aos-animate'"
     >
       <h3>Contatos</h3>
     </div>
     <div class="l-contacts">
       <base-button
+        data-aos="zoom-out-up"
         v-for="link in links"
         :key="link.icon"
         :button-destination="link.link"
@@ -15,7 +17,7 @@
         :button-icon="link.icon"
         button-type="external"
         class="g-button--wide"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
     </div>
   </div>
@@ -72,5 +74,6 @@ export default {
   justify-content: center;
   align-content: flex-start;
   gap: $medium--spacing;
+  overflow: hidden;
 }
 </style>

@@ -3,11 +3,16 @@
     <section class="g-section">
       <img
         class="g-section__image"
+        data-aos="zoom-out-up"
         src="~/assets/images/pages/about/profile.jpg"
         alt="Minha foto, tirada pelo lado esquerdo do rosto. Estou de óculos e esboçando um sorriso de lábios cerrados."
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-right"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3><base-dynamic-text text-to-be-written="O homem por trás da mágica" /></h3>
         <p>
           William Gonçalves, carioca, natural da Zona Norte (Alô, Andaraí!), mas andarilho
@@ -52,11 +57,16 @@
     <section class="g-section g-section--right-aligned">
       <img
         class="g-section__image"
+        data-aos="zoom-out-up"
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-left"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3>De onde o Mago surgiu?</h3>
         <p>
           O Mago nasceu de uma brincadeira durante o Mega Hack 3.0 da Shawee, do qual
@@ -87,11 +97,16 @@
     <section class="g-section">
       <img
         class="g-section__image"
+        data-aos="zoom-out-up"
         src="~/assets/images/pages/about/stacks-used.png"
         alt="Ícone de fechamento de tag HTML, com os logos do Nuxt.js, do Vue.js e do Sass, abaixo."
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-right"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3>Sobre esse portif*da</h3>
         <p>
           Essa página linda de bonita foi feita com

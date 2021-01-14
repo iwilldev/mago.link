@@ -2,7 +2,8 @@
   <div>
     <div
       class="g-content-box g-content-box--short-padding"
-      :class="isMenuVisible ? 'invisible' : ''"
+      data-aos="fade-right"
+      :class="isMenuVisible ? 'invisible' : 'aos-animate'"
     >
       <h1>
         mago(<base-dynamic-text-group

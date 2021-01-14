@@ -2,14 +2,16 @@
   <div>
     <section class="g-section">
       <div
+        data-aos="fade-right"
         class="g-content-box g-content-box--short-padding"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       >
         <h1>Experiência</h1>
       </div>
       <div
+        data-aos="fade-right"
         class="g-content-box"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
         v-for="experience in experiences"
         :key="experience.position"
       >
@@ -20,17 +22,19 @@
     </section>
     <section class="g-section">
       <div
+        data-aos="fade-right"
         class="g-content-box g-content-box--short-padding"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       >
         <h1>Habilidades</h1>
       </div>
       <div class="l-stacks">
         <div
+          data-aos="zoom-out-up"
           class="stack"
           v-for="stack in stacks"
           :key="stack.name"
-          :class="isMenuVisible ? 'invisible' : ''"
+          :class="isMenuVisible ? 'invisible' : 'aos-animate'"
         >
           <img
             :src="require('~/assets/images/icons/' + stack.name + '.svg')"
@@ -43,14 +47,16 @@
     </section>
     <section class="g-section">
       <div
+        data-aos="fade-right"
         class="g-content-box g-content-box--short-padding"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       >
         <h1>Formações</h1>
       </div>
       <div
+        data-aos="fade-right"
         class="g-content-box"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
         v-for="certificate in certificates"
         :key="certificate.position"
       >

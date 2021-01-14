@@ -22,9 +22,11 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import TheNavbar from "~/components/TheNavbar.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default Vue.extend({
   components: { TheNavbar },
   transition: {
@@ -44,6 +46,25 @@ export default Vue.extend({
         { left: "85%", animationDuration: "29s", id: 7 },
       ],
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      AOS.init({
+        duration: 500,
+        offset: 0,
+        easing: "ease-out",
+      });
+    }, 1000);
+  },
+
+  updated() {
+    setTimeout(() => {
+      AOS.init({
+        duration: 500,
+        offset: 0,
+        easing: "ease-out",
+      });
+    }, 1000);
   },
 });
 </script>

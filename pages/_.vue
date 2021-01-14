@@ -3,10 +3,15 @@
     <img
       src="~/assets/images/pages/not-found/ronaldinho.png"
       alt="Ronaldinho Gaúcho, o rei do rolê aleatório"
+      data-aos="zoom-in-down"
       class="not-found-image"
-      :class="isMenuVisible ? 'invisible' : ''"
+      :class="isMenuVisible ? 'invisible' : 'aos-animate'"
     />
-    <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+    <div
+      class="g-content-box"
+      :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      data-aos="fade-right"
+    >
       <h3><base-dynamic-text text-to-be-written="mermão! que rolé foi esse?" /></h3>
       <p>
         É estranho que tenhamos chegado até aqui. Como todos os scripts dessa página foram
@@ -58,6 +63,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .not-found-image {
+  overflow: hidden;
   position: absolute;
   bottom: 0;
   right: $short--spacing;

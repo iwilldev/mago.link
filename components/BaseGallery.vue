@@ -1,8 +1,9 @@
 <template>
   <div>
     <div
+      data-aos="fade-right"
       class="g-content-box g-content-box--short-padding"
-      :class="isMenuVisible ? 'invisible' : ''"
+      :class="isMenuVisible ? 'invisible' : 'aos-animate'"
     >
       <h1>
         {{ pageTitle }}(<base-dynamic-text-group
@@ -12,6 +13,7 @@
     </div>
     <div class="g-l-gallery">
       <base-card
+        data-aos="zoom-out-up"
         v-for="post in postsList"
         :key="post.id"
         :card-title="post.title"
@@ -20,7 +22,7 @@
         :card-type="cardType"
         :card-image="post.image ? post.image : null"
         :card-destination="cardType === 'internal' ? cardDestination : post.link"
-        :class="isMenuVisible ? 'invisible' : ''"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
     </div>
   </div>
@@ -77,5 +79,6 @@ export default Vue.extend({
   justify-content: center;
   align-content: center;
   gap: $medium--spacing;
+  overflow: hidden;
 }
 </style>

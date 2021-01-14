@@ -5,9 +5,14 @@
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
         class="g-section__image"
-        :class="isMenuVisible ? 'invisible' : ''"
+        data-aos="zoom-out-up"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-right"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h1><base-dynamic-text text-to-be-written="Vamos fazer mágica?" /></h1>
         <p>
           Está precisando de um combustível criativo para seu negócio ou projeto? Achou!
@@ -26,9 +31,14 @@
         src="~/assets/images/pages/services/services-web.png"
         alt="Ícone de fechamento de tag acima e ícones abaixo: JavaScript, CSS, HTML, Vue.js e ReactJS"
         class="g-section__image"
-        :class="isMenuVisible ? 'invisible' : ''"
+        data-aos="zoom-out-up"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-left"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3>Sites, Apps e Interfaces</h3>
         <p>
           De páginas institucionais a aplicações web customizadas, posso desenvolver uma
@@ -48,9 +58,14 @@
         src="~/assets/images/pages/services/services-design.png"
         alt="Ícone branco de uma paleta de cores com fundo vermelho"
         class="g-section__image"
-        :class="isMenuVisible ? 'invisible' : ''"
+        data-aos="zoom-out-up"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-right"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3>Criação de Marca, Artes para Publicidade e Material Corporativo</h3>
         <p>
           Desenvolvo projetos visuais, desde a sua identidade até o material que será
@@ -74,9 +89,14 @@
         src="~/assets/images/pages/about/mage-in-red.png"
         alt="Ícone do logo do Mago em cor branca com fundo vermelho."
         class="g-section__image"
-        :class="isMenuVisible ? 'invisible' : ''"
+        data-aos="zoom-out-up"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
       />
-      <div class="g-content-box" :class="isMenuVisible ? 'invisible' : ''">
+      <div
+        class="g-content-box"
+        data-aos="fade-left"
+        :class="isMenuVisible ? 'invisible' : 'aos-animate'"
+      >
         <h3>Serviços pontuais e recorrentes</h3>
         <p>
           Se você entende que sua demanda pode ser atendida através de um projeto,

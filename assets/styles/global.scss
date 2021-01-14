@@ -217,13 +217,11 @@ p a {
 }
 
 .invisible {
-  transform: rotateX(-30deg);
-  transition: 0.25s;
   opacity: 0;
 }
 
 * {
-  transition: 0.25s;
+  transition: 0.5s;
 }
 
 @keyframes animate {

@@ -67,7 +67,7 @@ export default Vue.extend({
 
   opacity: 0;
 
-  transition: 0.25s;
+  transition: 0.5s;
 
   &.visible {
     visibility: visible;
@@ -89,6 +89,7 @@ export default Vue.extend({
     text-align: center;
     width: 90%;
     max-width: 450px;
+    transition: 0.5s;
   }
 }
 </style>
