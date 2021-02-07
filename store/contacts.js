@@ -1,38 +1,38 @@
 export const state = () => ({
   links: [
     {
-      icon: 'whatsapp',
+      icon: 'phone',
       text: '021 96544 3935',
-      link: 'https://wa.me/5521965443935',
+      link: 'tel:+5521965443935',
+    },
+    {
+      icon: 'telegram',
+      text: 'Telegram',
+      link: 'https://t.me/williammago',
     },
     {
       icon: 'instagram',
-      text: 'william.mago',
+      text: 'Instagram',
       link: 'https://www.instagram.com/william.mago',
     },
     {
       icon: 'github',
-      text: 'williammago',
+      text: 'GitHub',
       link: 'https://github.com/williammago',
     },
     {
       icon: 'linkedin',
-      text: 'williammago',
+      text: 'LinkedIn',
       link: 'https://www.linkedin.com/in/williammago/',
     },
     {
-      icon: 'rocketseat',
-      text: 'williammago',
-      link: 'https://app.rocketseat.com.br/me/williammago',
-    },
-    {
       icon: 'dev-to',
-      text: 'williammago',
+      text: 'DEV Community',
       link: 'https://dev.to/williammago',
     },
     {
       icon: 'youtube',
-      text: 'William Mago',
+      text: 'YouTube',
       link: 'https://youtube.com/channel/UCXJIa44t_QW1dWojbIPxXKg',
     },
     {
