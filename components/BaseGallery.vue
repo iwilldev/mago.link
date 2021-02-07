@@ -30,10 +30,8 @@
 
 <script>
 import Vue from "vue";
-import BaseCard from "~/components/BaseCard.vue";
 
 export default Vue.extend({
-  components: { BaseCard },
   props: {
     pageTitle: String,
     listOfDynamicTexts: Array,

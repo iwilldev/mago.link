@@ -180,10 +180,8 @@
 
 <script>
 import Vue from "vue";
-import BaseDynamicText from "~/components/BaseDynamicText.vue";
 
 export default Vue.extend({
-  components: { BaseDynamicText },
   head: {
     title: `Sobre mim | William 'Mago' Gonçalves`,
     meta: [

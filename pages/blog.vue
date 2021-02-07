@@ -9,10 +9,8 @@
 
 <script>
 import Vue from "vue";
-import BaseGallery from "~/components/BaseGallery.vue";
 
 export default Vue.extend({
-  components: { BaseGallery },
   head: {
     title: `Blog | William 'Mago' Gonçalves`,
     meta: [

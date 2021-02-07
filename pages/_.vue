@@ -26,9 +26,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import BaseDynamicText from "~/components/BaseDynamicText.vue";
 export default Vue.extend({
-  components: { BaseDynamicText },
   head: {
     title: `Ops! Caminho errado | William 'Mago' Gonçalves`,
     meta: [
